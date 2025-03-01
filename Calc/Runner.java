@@ -40,12 +40,11 @@ public class Runner {
             if (scan.hasNextDouble()) {
                 number = scan.nextDouble();
                 scan.nextLine(); // Consume newline character
-                break;
+                return number;  // Return valid number immediately
             } else {
+                scan.nextLine(); // Clear the entire invalid input line
                 System.out.println("This entry can only contain numbers. Please try again.");
-                scan.nextLine(); // Discard invalid input
             }
         }
-        return number;
     }
 }
