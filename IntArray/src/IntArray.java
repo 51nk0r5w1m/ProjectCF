@@ -2,9 +2,9 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class IntArray {
-    // Private data fields for your IntArray class
+    // Private data fields for IntArray class
     private int length;     // Stores the number of elements in the array
-    private int myArray[];  // Array to store integer values
+    private int[] myArray;  // Array to store integer values
 
     // Constructor: Initializes the array with the given size
     public IntArray(int l) {
@@ -30,7 +30,7 @@ public class IntArray {
         if (element >= 0 && element < length) {
             return myArray[element]; // Return the value at the valid index
         }
-        return -1; // Return -1 if index is invalid (instead of throwing an exception)
+        return -1; // Return -1 if index is invalid (avoid throwing an exception)
     }
 
     // Sets a specific element in the array to a new value (only if valid)
@@ -52,15 +52,15 @@ public class IntArray {
 
     // Clears the array by setting all elements to zero
     public void clear() {
-        Arrays.fill(myArray, 0); // Efficiently fills the entire array with zeros
+        Arrays.fill(myArray, 0); // Fills the entire array with zeros
     }
 
     // Sorts the array in ascending order
     public void sort() {
-        Arrays.sort(myArray); // Uses Java's built-in sorting method
+        Arrays.sort(myArray); // Uses built-in sorting method
     }
 
-    // Converts the array to a readable string format (matches professor's format)
+    // Converts the array to a readable string format (matches tutorial's format)
     public String toString() {
         // Start with a header to indicate that the array data is being displayed
         String result = "IntArray instance data:\n";
